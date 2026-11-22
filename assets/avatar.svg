@@ -1,8 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Illustrated avatar of a software engineer at her laptop">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Illustrated avatar of Manali at her laptop">
   <defs>
-    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3a1fd1"/>
-      <stop offset="1" stop-color="#2506ad"/>
+    <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2d33"/>
+      <stop offset="1" stop-color="#16171b"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241612"/>
+      <stop offset="1" stop-color="#140c0a"/>
     </linearGradient>
     <linearGradient id="lid" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#d9dde8"/>
@@ -10,52 +14,62 @@
     </linearGradient>
   </defs>
 
-  <!-- hair, back layer -->
-  <path d="M120 170 C110 90 160 55 205 58 C255 60 292 95 286 170 C284 230 300 285 292 330 L112 330 C100 285 122 230 120 170 Z" fill="#2a1a14"/>
+  <!-- long wavy hair, back layer -->
+  <path fill="url(#hair)" d="M196 56 C140 56 112 100 114 160 C116 205 104 235 96 268
+    C90 292 100 312 94 336 L314 336 C306 308 316 286 306 258
+    C296 230 290 205 290 160 C292 96 254 56 196 56 Z"/>
+  <!-- wave texture on the falling hair -->
+  <path d="M104 282 Q114 296 104 312 M296 270 Q308 288 298 306 M118 230 Q126 246 118 262" stroke="#3a2620" stroke-width="3" fill="none" stroke-linecap="round"/>
 
-  <!-- shoulders / top -->
-  <path d="M78 400 C80 330 120 300 160 292 L240 292 C282 300 322 330 324 400 Z" fill="url(#shirt)"/>
-  <!-- collar -->
-  <path d="M170 292 L200 322 L230 292 Z" fill="#c98d6b"/>
+  <!-- puffer jacket -->
+  <path fill="url(#jacket)" d="M74 400 C76 338 112 304 158 294 L242 294 C288 304 324 338 326 400 Z"/>
+  <!-- quilting lines -->
+  <path d="M96 352 Q130 344 160 350 M240 350 Q272 344 306 352 M86 384 Q124 374 160 380 M240 380 Q278 374 316 384 M114 322 Q136 316 158 320 M242 320 Q266 316 288 322"
+        stroke="#3b3e46" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- high collar + zip -->
+  <path d="M160 294 C164 278 176 272 182 272 L200 300 L218 272 C224 272 236 278 240 294 L222 310 L200 300 L178 310 Z" fill="#202227"/>
+  <line x1="200" y1="302" x2="200" y2="400" stroke="#4a4d56" stroke-width="3"/>
+  <!-- inner top -->
+  <path d="M184 276 L200 300 L216 276 Z" fill="#0f1013"/>
 
   <!-- neck -->
-  <rect x="180" y="238" width="40" height="58" rx="16" fill="#b87a58"/>
-
-  <!-- ears + earrings -->
-  <ellipse cx="141" cy="182" rx="11" ry="16" fill="#c98d6b"/>
-  <ellipse cx="259" cy="182" rx="11" ry="16" fill="#c98d6b"/>
-  <circle cx="141" cy="203" r="5" fill="#f2b01e"/>
-  <circle cx="259" cy="203" r="5" fill="#f2b01e"/>
+  <rect x="181" y="236" width="38" height="46" rx="14" fill="#b87a58"/>
 
   <!-- face -->
-  <ellipse cx="200" cy="178" rx="58" ry="70" fill="#c98d6b"/>
+  <ellipse cx="200" cy="176" rx="56" ry="68" fill="#c98d6b"/>
+  <!-- ears (mostly hidden by hair) -->
+  <ellipse cx="145" cy="182" rx="9" ry="14" fill="#b87a58"/>
 
-  <!-- fringe -->
-  <path d="M140 160 C138 110 170 88 206 90 C246 92 268 120 262 160 C250 132 228 118 200 116 C176 128 156 140 140 160 Z" fill="#2a1a14"/>
+  <!-- side-parted front hair -->
+  <path fill="url(#hair)" d="M144 196 C134 136 160 92 214 90 C252 90 270 120 266 168
+    C262 140 248 118 222 110 C206 130 182 140 152 150 C148 166 146 182 144 196 Z"/>
+  <!-- hair sweeping over her left shoulder (viewer's right) -->
+  <path fill="url(#hair)" d="M258 150 C270 190 268 230 280 262 C288 284 280 300 270 318 L246 318 C254 296 250 270 246 246 C242 214 252 186 258 150 Z"/>
 
   <!-- brows -->
-  <path d="M166 158 Q178 151 190 157" stroke="#2a1a14" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M210 157 Q222 151 234 158" stroke="#2a1a14" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M166 156 Q178 149 191 155" stroke="#241612" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <path d="M209 155 Q222 149 234 156" stroke="#241612" stroke-width="4.5" fill="none" stroke-linecap="round"/>
 
   <!-- eyes -->
-  <ellipse cx="178" cy="176" rx="6.5" ry="8" fill="#1c1210"/>
-  <ellipse cx="222" cy="176" rx="6.5" ry="8" fill="#1c1210"/>
-  <circle cx="180" cy="173" r="2.2" fill="#fff"/>
-  <circle cx="224" cy="173" r="2.2" fill="#fff"/>
+  <ellipse cx="178" cy="175" rx="7" ry="8" fill="#1c1210"/>
+  <ellipse cx="222" cy="175" rx="7" ry="8" fill="#1c1210"/>
+  <circle cx="180.5" cy="172" r="2.4" fill="#fff"/>
+  <circle cx="224.5" cy="172" r="2.4" fill="#fff"/>
+  <path d="M169 169 Q178 163 187 169 M213 169 Q222 163 231 169" stroke="#1c1210" stroke-width="2" fill="none" stroke-linecap="round"/>
 
   <!-- nose -->
-  <path d="M200 182 Q196 198 202 201" stroke="#9c6446" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M200 180 Q195 197 203 200" stroke="#9c6446" stroke-width="3" fill="none" stroke-linecap="round"/>
 
   <!-- cheeks -->
-  <ellipse cx="164" cy="204" rx="11" ry="6" fill="#e08b7a" opacity=".45"/>
-  <ellipse cx="236" cy="204" rx="11" ry="6" fill="#e08b7a" opacity=".45"/>
+  <ellipse cx="165" cy="203" rx="11" ry="6" fill="#e08b7a" opacity=".4"/>
+  <ellipse cx="235" cy="203" rx="11" ry="6" fill="#e08b7a" opacity=".4"/>
 
-  <!-- smile -->
-  <path d="M180 214 Q200 234 220 214 Q200 224 180 214 Z" fill="#8b2a2a"/>
-  <path d="M184 216 Q200 222 216 216" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- soft closed smile -->
+  <path d="M183 216 Q200 228 217 216" stroke="#8b3a34" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M186 216 Q200 224 214 216 Q200 220 186 216 Z" fill="#a8564c"/>
 
   <!-- laptop -->
-  <path d="M110 330 L290 330 L300 400 L100 400 Z" fill="url(#lid)"/>
-  <path d="M110 330 L290 330 L300 400 L100 400 Z" fill="none" stroke="#8d95ab" stroke-width="2"/>
-  <text x="200" y="374" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="700" fill="#2506ad">&lt;/&gt;</text>
+  <path d="M110 336 L290 336 L300 400 L100 400 Z" fill="url(#lid)"/>
+  <path d="M110 336 L290 336 L300 400 L100 400 Z" fill="none" stroke="#8d95ab" stroke-width="2"/>
+  <text x="200" y="378" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="700" fill="#2506ad">&lt;/&gt;</text>
 </svg>
