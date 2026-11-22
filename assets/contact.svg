@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" role="img" aria-label="Illustration of Manali at her laptop answering messages">
+  <!-- soft backdrop -->
+  <circle cx="250" cy="215" r="170" fill="#eceffd"/>
+  <path d="M60 70 q20 -22 44 -6 q16 -16 36 0 q16 -4 22 10 Z" fill="#e7eaf8"/>
+  <path d="M340 52 q18 -18 38 -4 q14 -12 30 2 q14 -2 18 10 Z" fill="#e7eaf8"/>
+
+  <!-- floating icons -->
+  <rect x="180" y="74" width="54" height="38" rx="5" fill="#cfc6f5"/>
+  <path d="M180 79 L207 98 L234 79" stroke="#fff" stroke-width="3" fill="none"/>
+  <g fill="#cfc6f5">
+    <path d="M96 140 h52 a10 10 0 0 1 10 10 v20 a10 10 0 0 1 -10 10 h-34 l-12 12 v-12 h-6 a10 10 0 0 1 -10 -10 v-20 a10 10 0 0 1 10 -10 z"/>
+    <path d="M118 214 h44 a6 6 0 0 1 6 6 v26 a6 6 0 0 1 -6 6 h-18 l-8 10 l-8 -10 h-10 a6 6 0 0 1 -6 -6 v-26 a6 6 0 0 1 6 -6 z"/>
+  </g>
+  <circle cx="114" cy="160" r="4" fill="#fff"/><circle cx="127" cy="160" r="4" fill="#fff"/><circle cx="140" cy="160" r="4" fill="#fff"/>
+  <path d="M352 236 c-10 -14 -30 -4 -20 12 l20 18 l20 -18 c10 -16 -10 -26 -20 -12 z" fill="#d9d0f7"/>
+
+  <!-- big speech bubble -->
+  <path d="M300 112 h118 a14 14 0 0 1 14 14 v52 a14 14 0 0 1 -14 14 h-82 l-20 24 v-24 h-16 a14 14 0 0 1 -14 -14 v-52 a14 14 0 0 1 14 -14 z" fill="#f6c444"/>
+  <g stroke="#fff" stroke-width="7" stroke-linecap="round">
+    <line x1="314" y1="136" x2="344" y2="136"/><line x1="356" y1="136" x2="414" y2="136"/>
+    <line x1="314" y1="154" x2="392" y2="154"/><line x1="404" y1="154" x2="414" y2="154"/>
+    <line x1="314" y1="172" x2="364" y2="172"/>
+  </g>
+
+  <!-- hair, back -->
+  <path d="M206 168 C200 124 236 104 262 108 C296 112 312 140 306 176 C302 206 318 226 330 252 C340 274 326 296 304 300 L214 300 C192 290 184 268 194 246 C204 226 210 204 206 168 Z" fill="#1b2a4a"/>
+  <path d="M312 232 q16 16 8 36 M198 238 q-12 18 -2 36" stroke="#2c4170" stroke-width="3" fill="none"/>
+
+  <!-- body / sweater -->
+  <path d="M190 362 C192 300 214 274 256 272 C298 274 320 300 322 362 Z" fill="#2506ad"/>
+  <path d="M238 272 q18 14 36 0" stroke="#3a1fd1" stroke-width="6" fill="none"/>
+  <!-- neck + face -->
+  <rect x="244" y="236" width="24" height="40" rx="10" fill="#b87a58"/>
+  <ellipse cx="256" cy="200" rx="38" ry="46" fill="#c98d6b"/>
+  <!-- fringe, side part -->
+  <path d="M218 206 C210 158 234 140 264 142 C292 144 300 168 296 196 C290 176 280 164 262 160 C250 176 236 186 218 206 Z" fill="#1b2a4a"/>
+  <!-- face details -->
+  <ellipse cx="244" cy="202" rx="4" ry="5" fill="#1c1210"/>
+  <ellipse cx="272" cy="202" rx="4" ry="5" fill="#1c1210"/>
+  <path d="M248 224 q10 7 20 0" stroke="#8b3a34" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- headset -->
+  <path d="M216 198 C214 150 298 148 298 198" stroke="#8f7ae8" stroke-width="6" fill="none"/>
+  <rect x="208" y="190" width="16" height="26" rx="7" fill="#8f7ae8"/>
+  <rect x="290" y="190" width="16" height="26" rx="7" fill="#8f7ae8"/>
+  <path d="M220 214 q4 22 26 22" stroke="#8f7ae8" stroke-width="4" fill="none"/>
+  <circle cx="248" cy="236" r="4" fill="#8f7ae8"/>
+  <!-- arm on desk -->
+  <path d="M286 330 q-30 8 -58 8 l0 22 l70 0 z" fill="#2506ad"/>
+  <ellipse cx="232" cy="350" rx="16" ry="9" fill="#c98d6b"/>
+
+  <!-- laptop (back of lid facing us) -->
+  <path d="M104 268 L190 268 L206 362 L120 362 Z" fill="#e7ebf3" stroke="#a9b2c6" stroke-width="3"/>
+  <circle cx="156" cy="314" r="10" fill="#c6cfdc"/>
+  <rect x="190" y="356" width="64" height="6" rx="3" fill="#a9b2c6"/>
+
+  <!-- mug + plant -->
+  <rect x="330" y="322" width="32" height="40" rx="5" fill="#9b8cf0"/>
+  <path d="M362 332 q14 0 14 12 q0 12 -14 12" stroke="#9b8cf0" stroke-width="6" fill="none"/>
+  <path d="M342 312 q-6 -10 2 -18 M352 312 q-6 -10 2 -18" stroke="#c9c2ee" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M392 330 h44 l-6 32 h-32 z" fill="#f2b01e"/>
+  <rect x="388" y="322" width="52" height="10" rx="3" fill="#f6c444"/>
+  <path d="M412 322 C380 300 372 252 392 224 C416 252 424 294 412 322 Z" fill="#3fa7d6"/>
+  <path d="M414 322 C430 290 452 270 470 268 C470 300 446 320 414 322 Z" fill="#2b8fc0"/>
+  <path d="M412 320 q-14 -40 -20 -92 M416 320 q20 -30 50 -50" stroke="#a9dcf0" stroke-width="2" fill="none"/>
+
+  <!-- desk -->
+  <rect x="70" y="360" width="400" height="12" rx="6" fill="#d9d2f6"/>
+</svg>
