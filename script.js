@@ -235,6 +235,21 @@ function setupContactForm() {
   });
 }
 
+/* "Or send with Gmail": opens Gmail in the browser with the visitor's message filled in */
+function setupGmailLink() {
+  const link = document.getElementById("gmailLink");
+  const form = document.getElementById("contactForm");
+  const update = () => {
+    const d = new FormData(form);
+    const body = `${d.get("message") || ""}\n\n${d.get("name") || ""}${d.get("phone") ? "\n" + d.get("phone") : ""}`;
+    link.href = "https://mail.google.com/mail/?view=cm&fs=1&to=karankalmanali@gmail.com" +
+      `&su=${encodeURIComponent("Hello from " + (d.get("name") || "your portfolio"))}` +
+      `&body=${encodeURIComponent(body.trim())}`;
+  };
+  form.addEventListener("input", update);
+  link.addEventListener("click", update);
+}
+
 /* Hero background: drifting dots joined by thin lines */
 function setupNetwork() {
   const canvas = document.getElementById("network");
@@ -307,4 +322,5 @@ setupTyping();
 setupNav();
 setupReveal();
 setupContactForm();
+setupGmailLink();
 setupNetwork();
