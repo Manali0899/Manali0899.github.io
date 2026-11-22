@@ -205,28 +205,32 @@ function setupReveal() {
 function setupContactForm() {
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
+  const fallback = "Couldn't send right now. Please email karankalmanali@gmail.com.";
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    if (form.action.includes("YOUR_FORM_ID")) {
-      // No form service yet: open the visitor's email app with the message filled in
-      const d = new FormData(form);
-      const body = `${d.get("message")}\n\n${d.get("name")}\n${d.get("email")}${d.get("phone") ? "\n" + d.get("phone") : ""}`;
-      window.location.href = `mailto:karankalmanali@gmail.com?subject=${encodeURIComponent("Portfolio message from " + d.get("name"))}&body=${encodeURIComponent(body)}`;
-      status.textContent = "Opening your email app…";
-      status.className = "form-status ok";
-      return;
-    }
+    const btn = form.querySelector("button[type=submit]");
+    btn.disabled = true;
     status.textContent = "Sending…";
     status.className = "form-status";
+    const data = Object.fromEntries(new FormData(form));
+    data._subject = `Portfolio message from ${data.name}`;
+    data._template = "table";
     try {
-      const res = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
-      if (!res.ok) throw new Error();
+      const res = await fetch(form.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
+      });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || String(out.success) !== "true") throw new Error(out.message || "failed");
       form.reset();
-      status.textContent = "Thanks! I'll get back to you soon.";
+      status.textContent = "Thanks! Your message was sent.";
       status.className = "form-status ok";
     } catch {
-      status.textContent = "Something went wrong. Please email me instead.";
+      status.textContent = fallback;
       status.className = "form-status err";
+    } finally {
+      btn.disabled = false;
     }
   });
 }
