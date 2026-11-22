@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Illustrated avatar of a software engineer at her laptop">
+  <defs>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a1fd1"/>
+      <stop offset="1" stop-color="#2506ad"/>
+    </linearGradient>
+    <linearGradient id="lid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9dde8"/>
+      <stop offset="1" stop-color="#aab1c4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- hair, back layer -->
+  <path d="M120 170 C110 90 160 55 205 58 C255 60 292 95 286 170 C284 230 300 285 292 330 L112 330 C100 285 122 230 120 170 Z" fill="#2a1a14"/>
+
+  <!-- shoulders / top -->
+  <path d="M78 400 C80 330 120 300 160 292 L240 292 C282 300 322 330 324 400 Z" fill="url(#shirt)"/>
+  <!-- collar -->
+  <path d="M170 292 L200 322 L230 292 Z" fill="#c98d6b"/>
+
+  <!-- neck -->
+  <rect x="180" y="238" width="40" height="58" rx="16" fill="#b87a58"/>
+
+  <!-- ears + earrings -->
+  <ellipse cx="141" cy="182" rx="11" ry="16" fill="#c98d6b"/>
+  <ellipse cx="259" cy="182" rx="11" ry="16" fill="#c98d6b"/>
+  <circle cx="141" cy="203" r="5" fill="#f2b01e"/>
+  <circle cx="259" cy="203" r="5" fill="#f2b01e"/>
+
+  <!-- face -->
+  <ellipse cx="200" cy="178" rx="58" ry="70" fill="#c98d6b"/>
+
+  <!-- fringe -->
+  <path d="M140 160 C138 110 170 88 206 90 C246 92 268 120 262 160 C250 132 228 118 200 116 C176 128 156 140 140 160 Z" fill="#2a1a14"/>
+
+  <!-- brows -->
+  <path d="M166 158 Q178 151 190 157" stroke="#2a1a14" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M210 157 Q222 151 234 158" stroke="#2a1a14" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <ellipse cx="178" cy="176" rx="6.5" ry="8" fill="#1c1210"/>
+  <ellipse cx="222" cy="176" rx="6.5" ry="8" fill="#1c1210"/>
+  <circle cx="180" cy="173" r="2.2" fill="#fff"/>
+  <circle cx="224" cy="173" r="2.2" fill="#fff"/>
+
+  <!-- nose -->
+  <path d="M200 182 Q196 198 202 201" stroke="#9c6446" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- cheeks -->
+  <ellipse cx="164" cy="204" rx="11" ry="6" fill="#e08b7a" opacity=".45"/>
+  <ellipse cx="236" cy="204" rx="11" ry="6" fill="#e08b7a" opacity=".45"/>
+
+  <!-- smile -->
+  <path d="M180 214 Q200 234 220 214 Q200 224 180 214 Z" fill="#8b2a2a"/>
+  <path d="M184 216 Q200 222 216 216" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- laptop -->
+  <path d="M110 330 L290 330 L300 400 L100 400 Z" fill="url(#lid)"/>
+  <path d="M110 330 L290 330 L300 400 L100 400 Z" fill="none" stroke="#8d95ab" stroke-width="2"/>
+  <text x="200" y="374" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="700" fill="#2506ad">&lt;/&gt;</text>
+</svg>

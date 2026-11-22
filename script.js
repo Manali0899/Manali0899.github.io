@@ -38,14 +38,6 @@ const PROJECTS = [
     code: "https://github.com/Manali0899/realtime-anomaly-detection",
   },
   {
-    title: "Labor Scheduling System (MTA)",
-    categories: ["backend"],
-    icon: "fa-solid fa-calendar-days",
-    gradient: "linear-gradient(135deg, #0039a6, #4a7fd6)",
-    desc: "Django application that builds the next year's labor schedule, applies schedule changes and generates reports stored in Amazon S3. Internal project, so no public code.",
-    tags: ["Python", "Django", "AWS S3"],
-  },
-  {
     title: "AcuMedica – Medical Performance Dashboard",
     categories: ["data", "healthcare"],
     icon: "fa-solid fa-heart-pulse",
@@ -62,14 +54,6 @@ const PROJECTS = [
     desc: "Power BI dashboard for spotting suspicious transactions and fraud patterns.",
     tags: ["Power BI", "Data Analysis"],
     code: "https://github.com/Manali0899/Financial_Fraud_Intelligence",
-  },
-  {
-    title: "Restaurant Management System",
-    categories: ["backend"],
-    icon: "fa-solid fa-utensils",
-    gradient: "linear-gradient(135deg, #b24592, #f15f79)",
-    desc: "Restaurant management application built during my bachelor's degree.",
-    tags: ["Web App"],
   },
 ];
 
@@ -224,8 +208,12 @@ function setupContactForm() {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (form.action.includes("YOUR_FORM_ID")) {
-      status.textContent = "Contact form isn't connected yet.";
-      status.className = "form-status err";
+      // No form service yet: open the visitor's email app with the message filled in
+      const d = new FormData(form);
+      const body = `${d.get("message")}\n\n${d.get("name")}\n${d.get("email")}${d.get("phone") ? "\n" + d.get("phone") : ""}`;
+      window.location.href = `mailto:karankalmanali@gmail.com?subject=${encodeURIComponent("Portfolio message from " + d.get("name"))}&body=${encodeURIComponent(body)}`;
+      status.textContent = "Opening your email app…";
+      status.className = "form-status ok";
       return;
     }
     status.textContent = "Sending…";
