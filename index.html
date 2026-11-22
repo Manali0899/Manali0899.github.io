@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manali Karankal | Software Engineer</title>
+  <meta name="description" content="Manali Karankal — Software Engineer in New York building backend services with Python, Django, Java and Spring." />
+
+  <!-- Fonts & icons (loaded from CDNs, nothing to install) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="brand"><i class="fa-brands fa-python"></i> Manali Karankal</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <canvas id="network" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Hi There,<br />I'm Manali <span class="accent-orange">Karankal</span></h1>
+        <p class="availability">Available for <span>Full-time positions</span></p>
+        <p class="typing-line">I am into <span id="typed" class="typed"></span><span class="cursor">|</span></p>
+        <a href="#about" class="btn btn-primary">About Me <i class="fa-solid fa-circle-arrow-down"></i></a>
+        <div class="socials">
+          <!-- TODO: replace with your LinkedIn URL -->
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Manali0899" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <!-- TODO: replace with your email -->
+          <a href="mailto:your.email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="avatar-ring">
+          <!-- Put your photo at assets/hero.jpg (square works best). Until then, initials show. -->
+          <img src="assets/hero.jpg" alt="Manali Karankal" onerror="this.remove()" />
+          <span class="initials">MK</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <h2 class="section-title"><i class="fa-solid fa-user"></i> About <span class="accent-purple">Me</span></h2>
+    <div class="about-row">
+      <div class="about-photo">
+        <!-- Put a professional photo at assets/profile.jpg -->
+        <img src="assets/profile.jpg" alt="Manali Karankal" onerror="this.remove()" />
+        <span class="initials">MK</span>
+      </div>
+      <div class="about-content">
+        <h3>I'm Manali Karankal</h3>
+        <p class="roles">Software Engineer | Backend Developer | Full-Stack Developer</p>
+        <p>
+          I'm a software engineer at MTA New York City Transit, where I build Python and Django services
+          for the Production Planning team. My main project is a labor scheduling system that plans the
+          next year's labor schedule, handles changes as they come in, and produces the reports planners
+          rely on.
+        </p>
+        <p>
+          Before MTA, I spent a little over a year at Accelya in Mumbai working in Java and Spring on Revera,
+          an airline product, where I integrated REST APIs and file feeds for more than seven airline
+          clients and fixed high-priority production issues through go-live. I hold a Master's in Computer
+          Science from Pace University. I like backend work where the data has to be right and the system
+          has to keep running.
+        </p>
+        <div class="about-meta">
+          <!-- TODO: replace email -->
+          <p><i class="fa-solid fa-envelope"></i> <span>Email:</span> your.email@example.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> <span>Place:</span> New York, NY</p>
+        </div>
+        <!-- Put your resume at assets/Manali_Karankal_Resume.pdf -->
+        <a href="assets/Manali_Karankal_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Resume <i class="fa-solid fa-file-arrow-down"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <h2 class="section-title light"><i class="fa-solid fa-laptop-code"></i> Skills &amp; <span class="accent-yellow">Abilities</span></h2>
+    <div class="skills-box">
+      <div class="skills-grid" id="skillsGrid"><!-- filled by script.js --></div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="education" id="education">
+    <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> <span class="accent-purple">Education</span></h2>
+    <p class="quote">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." — Malcolm X</p>
+
+    <div class="edu-card">
+      <div class="edu-img edu-img-1"><i class="fa-solid fa-building-columns"></i><span>Pace University</span></div>
+      <div class="edu-content">
+        <h3>Master of Science in Computer Science</h3>
+        <p>Pace University, New York, NY</p>
+        <p class="edu-date">Jan 2023 – Dec 2024 | Graduated</p>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-img edu-img-2"><i class="fa-solid fa-building-columns"></i><span>University of Mumbai</span></div>
+      <div class="edu-content">
+        <h3>Bachelor of Engineering in Computer Engineering</h3>
+        <p>University of Mumbai, Mumbai, India</p>
+        <p class="edu-date">Aug 2017 – May 2021 | Graduated</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="work" id="work">
+    <h2 class="section-title light"><i class="fa-solid fa-laptop-code"></i> Projects <span class="accent-yellow">Made</span></h2>
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="all">All Projects</button>
+      <button class="filter" data-filter="backend">Backend &amp; APIs</button>
+      <button class="filter" data-filter="data">Data &amp; Analytics</button>
+      <button class="filter" data-filter="healthcare">Healthcare Domain</button>
+      <button class="filter" data-filter="finance">Banking &amp; Financial Domain</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid"><!-- filled by script.js --></div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="experience" id="experience">
+    <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+    <div class="timeline" id="timeline"><!-- filled by script.js --></div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <h2 class="section-title"><i class="fa-solid fa-headset"></i> Get in <span class="accent-purple">Touch</span></h2>
+    <div class="contact-card">
+      <div class="contact-art" aria-hidden="true">
+        <i class="fa-solid fa-paper-plane"></i>
+        <p>Have a role, a project or a question?<br />I'd be glad to hear from you.</p>
+      </div>
+      <!-- Form sends via Formspree (free). Replace YOUR_FORM_ID after creating a form at formspree.io -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label class="field"><i class="fa-solid fa-user"></i><input type="text" name="name" placeholder="Name" required /></label>
+        <label class="field"><i class="fa-solid fa-envelope"></i><input type="email" name="email" placeholder="Email" required /></label>
+        <label class="field"><i class="fa-solid fa-phone"></i><input type="tel" name="phone" placeholder="Phone" /></label>
+        <label class="field field-area"><i class="fa-solid fa-comment-dots"></i><textarea name="message" placeholder="Message" rows="5" required></textarea></label>
+        <div class="form-footer">
+          <span id="formStatus" class="form-status" role="status"></span>
+          <button type="submit" class="btn btn-primary">Submit <i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Manali's Portfolio</h3>
+        <p>Thank you for visiting my portfolio website. Connect with me over social media.</p>
+      </div>
+      <div>
+        <h3>quick links</h3>
+        <ul>
+          <li><a href="#home"><i class="fa-solid fa-circle-chevron-right"></i> home</a></li>
+          <li><a href="#about"><i class="fa-solid fa-circle-chevron-right"></i> about</a></li>
+          <li><a href="#skills"><i class="fa-solid fa-circle-chevron-right"></i> skills</a></li>
+          <li><a href="#work"><i class="fa-solid fa-circle-chevron-right"></i> work</a></li>
+          <li><a href="#experience"><i class="fa-solid fa-circle-chevron-right"></i> experience</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>contact info</h3>
+        <!-- TODO: replace email -->
+        <p><i class="fa-solid fa-envelope"></i> your.email@example.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> New York, NY, USA</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Manali0899" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:your.email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="credit">Designed with <i class="fa-solid fa-heart"></i> by Manali Karankal</p>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></a>
+
+  <script src="script.js"></script>
+</body>
+</html>
