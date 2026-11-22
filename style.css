@@ -190,11 +190,10 @@ section { padding: 90px 8%; }
 .contact { background: var(--bg-blue); }
 .contact-card { max-width: 1250px; margin: 0 auto; background: #fff; border-radius: 22px; padding: 60px; display: flex; gap: 60px; align-items: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); }
 .contact-art {
-  flex: 1; min-height: 380px; border-radius: 50%; aspect-ratio: 1; max-width: 420px;
-  background: radial-gradient(circle at 40% 40%, #eef1ff, #dfe4fb); display: flex; flex-direction: column;
-  align-items: center; justify-content: center; text-align: center; gap: 20px; color: var(--navy); padding: 40px;
+  flex: 1; max-width: 480px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; gap: 14px; color: var(--navy);
 }
-.contact-art i { font-size: 6rem; color: var(--indigo); transform: rotate(-12deg); }
+.contact-art img { width: 100%; height: auto; }
 .contact-art p { font-family: "Poppins", sans-serif; font-size: 1.15rem; font-weight: 500; }
 .contact-form { flex: 1.2; display: flex; flex-direction: column; gap: 22px; }
 .field { position: relative; display: block; }
@@ -263,7 +262,7 @@ section { padding: 90px 8%; }
   .edu-card { flex-direction: column; }
   .edu-img { flex-basis: 180px; }
   .contact-card { flex-direction: column; padding: 36px 24px; gap: 36px; }
-  .contact-art { min-height: 0; width: 100%; max-width: 320px; }
+  .contact-art { width: 100%; max-width: 380px; }
   /* Timeline becomes single column */
   .timeline::before { left: 26px; }
   .tl-item, .tl-item.right { width: 100%; left: 0; padding: 10px 0 30px 76px; }
