@@ -55,6 +55,15 @@ const PROJECTS = [
     tags: ["Power BI", "Data Analysis"],
     code: "https://github.com/Manali0899/Financial_Fraud_Intelligence",
   },
+  {
+    title: "Algorithm Visualizer",
+    categories: ["web"],
+    icon: "fa-solid fa-diagram-project",
+    gradient: "linear-gradient(135deg, #1d2b64, #6a3093)",
+    desc: "React web app that animates Bubble Sort, Merge Sort, Dijkstra's and A* step by step, with adjustable animation speed and separate views for sorting and path finding.",
+    tags: ["React", "Material UI", "Framer Motion"],
+    demo: "https://algoviz-cs608.netlify.app/",
+  },
 ];
 
 // Courses shown when hovering over an education card. Add course names as strings.
