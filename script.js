@@ -59,8 +59,22 @@ const PROJECTS = [
 
 // Courses shown when hovering over an education card. Add course names as strings.
 const COURSES = {
-  masters: [],
-  bachelors: [],
+  masters: [
+    "Algorithms and Computing Theory",
+    "Internet and Web Computing",
+    "Grid and Cloud Computing",
+    "Database Systems",
+  ],
+  bachelors: [
+    "Data Structures",
+    "Analysis of Algorithms",
+    "Operating Systems",
+    "Computer Organization and Architecture",
+    "Database Management Systems",
+    "Computer Networks",
+    "Software Engineering",
+    "Distributed Computing",
+  ],
 };
 
 const EXPERIENCE = [
