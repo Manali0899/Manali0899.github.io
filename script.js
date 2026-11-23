@@ -133,7 +133,6 @@ function renderExperience() {
         <div class="tl-card" tabindex="0">
           <h3>${e.company}</h3>
           <h4>${e.role}</h4>
-          <span class="hover-hint"><i class="fa-solid fa-chevron-down"></i> Hover for details</span>
           <div class="tl-details">
             <p class="tl-date">${e.date}</p>
             <ul>${e.points.map((pt) => `<li>${pt}</li>`).join("")}</ul>
@@ -149,8 +148,7 @@ function renderCourses() {
     if (!list.length) return;
     box.closest(".edu-card").classList.add("has-courses");
     box.closest(".edu-card").tabIndex = 0;
-    box.innerHTML = `<span class="hover-hint"><i class="fa-solid fa-chevron-down"></i> Hover to see courses</span>
-      <div class="edu-course-list"><h4>Courses</h4><ul>${list.map((c) => `<li>${c}</li>`).join("")}</ul></div>`;
+    box.innerHTML = `<div class="edu-course-list"><h4>Courses</h4><ul>${list.map((c) => `<li>${c}</li>`).join("")}</ul></div>`;
   });
 }
 
