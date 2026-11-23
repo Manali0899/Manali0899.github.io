@@ -64,6 +64,9 @@ const COURSES = {
     "Internet and Web Computing",
     "Grid and Cloud Computing",
     "Database Systems",
+    "Data Structures",
+    "System Design",
+    "Artificial Intelligence",
   ],
   bachelors: [
     "Data Structures",
