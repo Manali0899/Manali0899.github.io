@@ -113,6 +113,7 @@
         <h3>Master of Science in Computer Science</h3>
         <p>Pace University, New York, NY</p>
         <p class="edu-date">Jan 2023 – Dec 2024 | Graduated</p>
+        <div class="edu-courses" data-edu="masters"></div>
       </div>
     </div>
 
@@ -126,6 +127,7 @@
         <p>Pillai College of Engineering, New Panvel, Navi Mumbai</p>
         <p>University of Mumbai</p>
         <p class="edu-date">Aug 2017 – May 2021 | Graduated</p>
+        <div class="edu-courses" data-edu="bachelors"></div>
       </div>
     </div>
   </section>
@@ -157,16 +159,15 @@
         <img src="assets/contact.svg" alt="Illustration of Manali at her laptop answering messages" />
         <p>Have a role, a project or a question? I'd be glad to hear from you.</p>
       </div>
-      <!-- Messages are delivered to Manali's inbox by FormSubmit (formsubmit.co); no account needed -->
-      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/karankalmanali@gmail.com" method="POST">
+      <!-- Clicking the button opens Gmail in a new tab with the visitor's message filled in -->
+      <form class="contact-form" id="contactForm">
         <label class="field"><i class="fa-solid fa-user"></i><input type="text" name="name" placeholder="Name" required /></label>
         <label class="field"><i class="fa-solid fa-envelope"></i><input type="email" name="email" placeholder="Email" required /></label>
         <label class="field"><i class="fa-solid fa-phone"></i><input type="tel" name="phone" placeholder="Phone" /></label>
         <label class="field field-area"><i class="fa-solid fa-comment-dots"></i><textarea name="message" placeholder="Message" rows="5" required></textarea></label>
         <div class="form-footer">
           <span id="formStatus" class="form-status" role="status"></span>
-          <a id="gmailLink" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=karankalmanali@gmail.com" target="_blank" rel="noopener" style="font-family: Poppins, sans-serif; font-weight: 600; color: var(--indigo); margin-left: auto;"><i class="fa-brands fa-google"></i> Or send with Gmail</a>
-          <button type="submit" class="btn btn-primary">Submit <i class="fa-solid fa-paper-plane"></i></button>
+          <button type="submit" class="btn btn-primary">Send with Gmail <i class="fa-solid fa-paper-plane"></i></button>
         </div>
       </form>
     </div>

@@ -186,6 +186,25 @@ section { padding: 90px 8%; }
 .tl-card ul { margin-top: 20px; padding-left: 18px; }
 .tl-card li { font-family: "Poppins", sans-serif; font-size: 1rem; line-height: 1.65; margin-bottom: 8px; color: #111; }
 
+/* Experience: company + title visible, details on hover */
+.hover-hint { display: inline-block; margin-top: 8px; font-family: "Poppins", sans-serif; font-size: .9rem; font-weight: 600; opacity: .75; }
+.tl-details { max-height: 0; overflow: hidden; opacity: 0; transition: max-height .45s ease, opacity .3s ease; }
+.tl-card:hover .tl-details, .tl-card:focus-within .tl-details { max-height: 700px; opacity: 1; }
+.tl-card:hover .hover-hint, .tl-card:focus-within .hover-hint { display: none; }
+.tl-card { cursor: default; outline: none; }
+.tl-details .tl-date { margin-top: 10px; }
+
+/* Education: courses on hover */
+.edu-courses .hover-hint { color: #3f6e10; }
+.edu-course-list { max-height: 0; overflow: hidden; opacity: 0; transition: max-height .45s ease, opacity .3s ease; }
+.edu-card.has-courses:hover .edu-course-list, .edu-card.has-courses:focus-within .edu-course-list { max-height: 900px; opacity: 1; }
+.edu-card.has-courses:hover .edu-courses .hover-hint, .edu-card.has-courses:focus-within .edu-courses .hover-hint { display: none; }
+.edu-course-list h4 { font-family: "Poppins", sans-serif; color: #3f6e10; font-size: 1.4rem; margin: 14px 0 8px; }
+.edu-course-list ul { padding-left: 20px; }
+.edu-course-list li { font-family: "Poppins", sans-serif; font-size: 1rem; line-height: 1.8; }
+.edu-course-list li::marker { color: var(--purple); }
+.edu-card { outline: none; }
+
 /* ============ CONTACT ============ */
 .contact { background: var(--bg-blue); }
 .contact-card { max-width: 1250px; margin: 0 auto; background: #fff; border-radius: 22px; padding: 60px; display: flex; gap: 60px; align-items: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); }

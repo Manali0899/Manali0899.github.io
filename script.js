@@ -57,6 +57,12 @@ const PROJECTS = [
   },
 ];
 
+// Courses shown when hovering over an education card. Add course names as strings.
+const COURSES = {
+  masters: [],
+  bachelors: [],
+};
+
 const EXPERIENCE = [
   {
     company: "MTA New York City Transit",
@@ -124,14 +130,28 @@ function renderExperience() {
     (e, i) => `
       <div class="tl-item ${i % 2 ? "right" : "left"} reveal">
         <span class="tl-dot"><i class="fa-solid fa-briefcase"></i></span>
-        <div class="tl-card">
+        <div class="tl-card" tabindex="0">
           <h3>${e.company}</h3>
           <h4>${e.role}</h4>
-          <p class="tl-date">${e.date}</p>
-          <ul>${e.points.map((pt) => `<li>${pt}</li>`).join("")}</ul>
+          <span class="hover-hint"><i class="fa-solid fa-chevron-down"></i> Hover for details</span>
+          <div class="tl-details">
+            <p class="tl-date">${e.date}</p>
+            <ul>${e.points.map((pt) => `<li>${pt}</li>`).join("")}</ul>
+          </div>
         </div>
       </div>`
   ).join("");
+}
+
+function renderCourses() {
+  document.querySelectorAll(".edu-courses").forEach((box) => {
+    const list = COURSES[box.dataset.edu] || [];
+    if (!list.length) return;
+    box.closest(".edu-card").classList.add("has-courses");
+    box.closest(".edu-card").tabIndex = 0;
+    box.innerHTML = `<span class="hover-hint"><i class="fa-solid fa-chevron-down"></i> Hover to see courses</span>
+      <div class="edu-course-list"><h4>Courses</h4><ul>${list.map((c) => `<li>${c}</li>`).join("")}</ul></div>`;
+  });
 }
 
 /* =========================================================
@@ -205,49 +225,17 @@ function setupReveal() {
 function setupContactForm() {
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
-  const fallback = "Couldn't send right now. Please email karankalmanali@gmail.com.";
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const btn = form.querySelector("button[type=submit]");
-    btn.disabled = true;
-    status.textContent = "Sending…";
-    status.className = "form-status";
-    const data = Object.fromEntries(new FormData(form));
-    data._subject = `Portfolio message from ${data.name}`;
-    data._template = "table";
-    try {
-      const res = await fetch(form.action, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(data),
-      });
-      const out = await res.json().catch(() => ({}));
-      if (!res.ok || String(out.success) !== "true") throw new Error(out.message || "failed");
-      form.reset();
-      status.textContent = "Thanks! Your message was sent.";
-      status.className = "form-status ok";
-    } catch {
-      status.textContent = fallback;
-      status.className = "form-status err";
-    } finally {
-      btn.disabled = false;
-    }
-  });
-}
-
-/* "Or send with Gmail": opens Gmail in the browser with the visitor's message filled in */
-function setupGmailLink() {
-  const link = document.getElementById("gmailLink");
-  const form = document.getElementById("contactForm");
-  const update = () => {
     const d = new FormData(form);
-    const body = `${d.get("message") || ""}\n\n${d.get("name") || ""}${d.get("phone") ? "\n" + d.get("phone") : ""}`;
-    link.href = "https://mail.google.com/mail/?view=cm&fs=1&to=karankalmanali@gmail.com" +
-      `&su=${encodeURIComponent("Hello from " + (d.get("name") || "your portfolio"))}` +
-      `&body=${encodeURIComponent(body.trim())}`;
-  };
-  form.addEventListener("input", update);
-  link.addEventListener("click", update);
+    const body = `${d.get("message")}\n\n${d.get("name")}\n${d.get("email")}${d.get("phone") ? "\n" + d.get("phone") : ""}`;
+    const url = "https://mail.google.com/mail/?view=cm&fs=1&to=karankalmanali@gmail.com" +
+      `&su=${encodeURIComponent("Hello from " + d.get("name"))}` +
+      `&body=${encodeURIComponent(body)}`;
+    window.open(url, "_blank", "noopener");
+    status.textContent = "Gmail opened in a new tab. Just click Send there.";
+    status.className = "form-status ok";
+  });
 }
 
 /* Hero background: drifting dots joined by thin lines */
@@ -317,10 +305,10 @@ function setupNetwork() {
 renderSkills();
 renderProjects();
 renderExperience();
+renderCourses();
 setupProjectFilters();
 setupTyping();
 setupNav();
 setupReveal();
 setupContactForm();
-setupGmailLink();
 setupNetwork();
